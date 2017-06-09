@@ -16,9 +16,7 @@ public class App {
 		
 		//db.dbQuery("abcd");
 		QueryResult result = db.dbSelect("SELECT * FROM tabedef ORDER BY id DESC", new Object[]{});
-		if(result == null){
-			System.out.println("jajj ez null");
-		}
+		
 		System.out.println("row count: " + result.getCount());
 		for(QueryResult.QueryRow row: result.getAllRow()){
 			System.out.println(row.get("id") + " - " + row.get("name"));
